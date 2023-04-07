@@ -2,38 +2,47 @@ package com.addressbook;
 
 public class Contact {
 
-	String FName,LName,addr,phoneNum,city,state,zip;
+	String firstName;
+	String lastName;
+	String city;
+	String state;
+	String zip;
+	String phoneNumber;
 
-	public String getFName() {
-		return FName;
+	/*
+	 * For Encapsulation, took instance variables. Which we are going to use through
+	 * getter and setter methods.
+	 */
+	public Contact() {
+
 	}
 
-	public void setFName(String fName) {
-		FName = fName;
+	// Declaration of parameterised constructor.
+	public Contact(String firstName, String lastName, String address, String city, String state, String zip,
+			String phoneNumber, String emailId) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+        this.city = city;
+		this.state = state;
+		this.zip = zip;
+		this.phoneNumber = phoneNumber;
+
 	}
 
-	public String getLName() {
-		return LName;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setLName(String lName) {
-		LName = lName;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
-	public String getAddr() {
-		return addr;
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void setAddr(String addr) {
-		this.addr = addr;
-	}
-
-	public String getPhoneNum() {
-		return phoneNum;
-	}
-
-	public void setPhoneNum(String phoneNum) {
-		this.phoneNum = phoneNum;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	public String getCity() {
@@ -59,7 +68,13 @@ public class Contact {
 	public void setZip(String zip) {
 		this.zip = zip;
 	}
-	
-	
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
 
 }
