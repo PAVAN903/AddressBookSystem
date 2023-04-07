@@ -18,8 +18,8 @@ public class Contact {
 	}
 
 	// Declaration of parameterised constructor.
-	public Contact(String firstName, String lastName, String address, String city, String state, String zip,
-			String phoneNumber, String emailId) {
+	public Contact(String firstName, String lastName, String city, String state, String zip,
+			String phoneNumber) {
 		this.firstName = firstName;
 		this.lastName = lastName;
         this.city = city;
