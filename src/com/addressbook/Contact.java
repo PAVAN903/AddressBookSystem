@@ -18,11 +18,10 @@ public class Contact {
 	}
 
 	// Declaration of parameterised constructor.
-	public Contact(String firstName, String lastName, String city, String state, String zip,
-			String phoneNumber) {
+	public Contact(String firstName, String lastName, String city, String state, String zip, String phoneNumber) {
 		this.firstName = firstName;
 		this.lastName = lastName;
-        this.city = city;
+		this.city = city;
 		this.state = state;
 		this.zip = zip;
 		this.phoneNumber = phoneNumber;
@@ -77,4 +76,14 @@ public class Contact {
 		this.phoneNumber = phoneNumber;
 	}
 
-}
+	public String toString() {
+	        return "Contact{" +
+	                "firstName='" + firstName + '\'' +
+	                ", lastName='" + lastName +
+	                ", city='" + city + '\'' +
+	                ", state='" + state + '\'' +
+	                ", zip='" + zip + '\'' +
+	                ", phoneNumber='" + phoneNumber + '\'' +
+	                '}';
+
+}}

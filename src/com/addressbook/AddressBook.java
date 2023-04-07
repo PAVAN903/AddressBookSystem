@@ -1,11 +1,13 @@
 package com.addressbook;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AddressBook {
 	Contact obj = new Contact();
-	
-     void addContact() {
+	ArrayList<Contact> list=new ArrayList<>();
+
+	void addContact() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("enter first name");
 		String firstname = sc.next();
@@ -30,7 +32,7 @@ public class AddressBook {
 
 	void edit() {
 		System.out.println("enter name to be edit");
-		 Scanner sc1 = new Scanner(System.in);
+		Scanner sc1 = new Scanner(System.in);
 		String newName = sc1.next();
 		if (obj.getFirstName().equalsIgnoreCase(newName)) {
 			System.out.println("enter first name");
@@ -45,29 +47,31 @@ public class AddressBook {
 			String zip = sc1.next();
 			System.out.println("enter phone number name");
 			String phonenumber = sc1.next();
-			 obj = new Contact(firstname, lastname, city, state, zip, phonenumber);
+			obj = new Contact(firstname, lastname, city, state, zip, phonenumber);
 		} else {
 
 			System.out.println("entered name is not exists in contact list");
 
 		}
-	   }
-    public void delete() { //This method is to delete a contact by  name.
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the first name of the contact to delete the contact :");
-        String deletedName = scanner.next();
-        if (obj.getFirstName().equalsIgnoreCase(deletedName)) {
-            System.out.println("The contact has deleted. ");
-            obj.setFirstName(null);
-            obj.setLastName(null);
-            obj.setCity(null);
-            obj.setState(null);
-            obj.setZip(null);
-            obj.setPhoneNumber(null);
-          
+	}
 
-        }
+	public void delete() { // This method is to delete a contact by name.
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter the first name of the contact to delete the contact :");
+		String deletedName = scanner.next();
+		if (obj.getFirstName().equalsIgnoreCase(deletedName)) {
+			System.out.println("The contact has deleted. ");
+			obj.setFirstName(null);
+			obj.setLastName(null);
+			obj.setCity(null);
+			obj.setState(null);
+			obj.setZip(null);
+			obj.setPhoneNumber(null);
+		}
 
+	}
+	public void multipleContact() {
+		list.add(obj);
 	}
 
 }
